@@ -1,0 +1,103 @@
+/* src/pages/About.css */
+
+/* Modern Header */
+.about-header-modern {
+    background: radial-gradient(circle at top right, #2A9D8F 0%, #264653 100%);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding-top: 60px;
+    /* Navbar space */
+}
+
+.header-overlay-modern {
+    position: absolute;
+    inset: 0;
+    background: url('../assets/hero-bg.png');
+    /* Texture */
+    opacity: 0.1;
+    mix-blend-mode: overlay;
+}
+
+.modern-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(5px);
+}
+
+.modern-title {
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #E9C46A, #F97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Story Sections Modern */
+.story-modern {
+    padding: 6rem 0;
+}
+
+.story-content h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.story-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-box {
+    border-left: 4px solid var(--secondary);
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--primary);
+    background: linear-gradient(to right, rgba(249, 115, 22, 0.05), transparent);
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Chart Container within Story */
+.chart-container-modern {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.chart-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .modern-title {
+        font-size: 3rem;
+    }
+}

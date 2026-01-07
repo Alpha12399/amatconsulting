@@ -1,0 +1,442 @@
+/* UI Styles */
+.guide-download-section {
+    padding: 6rem 0;
+    background: var(--bg);
+}
+
+.guide-cta-card {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    padding: 4rem;
+    border-radius: 32px;
+    background: linear-gradient(135deg, var(--primary) 0%, #1a3a4a 100%);
+    color: white;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.cta-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.cta-info p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.cta-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cta-features li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+}
+
+.cta-features li svg {
+    color: var(--secondary);
+}
+
+.btn-download-guide {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-download-guide:hover:not(:disabled) {
+    background: #f59e0b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+}
+
+.btn-download-guide:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.guide-preview-visual {
+    position: relative;
+}
+
+.preview-stack {
+    position: relative;
+    height: 350px;
+}
+
+.preview-page {
+    position: absolute;
+    width: 240px;
+    height: 320px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    top: 50%;
+    left: 50%;
+}
+
+.preview-page.p1 {
+    transform: translate(-40%, -40%) rotate(-5deg);
+    z-index: 3;
+    background: #fff url('../assets/hero_consultants.png') center/cover;
+}
+
+.preview-page.p2 {
+    transform: translate(-50%, -50%) rotate(0deg);
+    z-index: 2;
+    opacity: 0.8;
+}
+
+.preview-page.p3 {
+    transform: translate(-60%, -60%) rotate(5deg);
+    z-index: 1;
+    opacity: 0.6;
+}
+
+/* PDF STYLES (Hidden but used for capture) */
+.pdf-source {
+    width: 210mm;
+    background: white;
+    color: #1f2937;
+    font-family: 'Inter', sans-serif;
+}
+
+.guide-page {
+    width: 210mm;
+    height: 297mm;
+    padding: 20mm;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.page-header {
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 5mm;
+    margin-bottom: 10mm;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.page-header.white {
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Page 1 - Cover */
+.cover {
+    background: var(--primary);
+    color: white;
+    padding: 30mm 20mm;
+    text-align: center;
+    justify-content: center;
+    border: 5mm solid var(--secondary);
+}
+
+.cover-brand-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5mm;
+    margin-bottom: 15mm;
+}
+
+.pdf-logo {
+    width: 35mm;
+    height: 35mm;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.cover h1 {
+    font-size: 32pt;
+    line-height: 1.1;
+    margin: 10mm 0;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.cover-line {
+    width: 60mm;
+    height: 2mm;
+    background: var(--secondary);
+    margin: 0 auto 8mm;
+}
+
+.cover-subtitle {
+    font-size: 13pt;
+    opacity: 0.95;
+    max-width: 150mm;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.cover-features {
+    display: flex;
+    justify-content: center;
+    gap: 4mm;
+    margin-top: 15mm;
+}
+
+/* Content Pages */
+.page-content h2 {
+    font-size: 22pt;
+    color: var(--primary);
+    margin-bottom: 6mm;
+    font-weight: 700;
+    border-left: 4mm solid var(--secondary);
+    padding-left: 5mm;
+}
+
+.intro-text {
+    font-size: 11pt;
+    line-height: 1.6;
+    margin-bottom: 8mm;
+    color: #374151;
+}
+
+.section-intro {
+    font-size: 10.5pt;
+    font-style: italic;
+    color: #6b7280;
+    margin-bottom: 5mm;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8mm;
+    margin-bottom: 10mm;
+}
+
+.info-block h3 {
+    font-size: 13pt;
+    color: var(--primary);
+    margin-bottom: 3mm;
+}
+
+.info-block p {
+    font-size: 10pt;
+    line-height: 1.5;
+    margin-bottom: 3mm;
+}
+
+.content-bullet-list {
+    padding-left: 5mm;
+    font-size: 10pt;
+}
+
+.info-block.highlight {
+    background: #f8fafc;
+    padding: 5mm;
+    border-left: 3mm solid var(--secondary);
+    border-radius: 0 4mm 4mm 0;
+}
+
+.visual-diagram-container {
+    margin-top: 10mm;
+    text-align: center;
+}
+
+.diagram-caption {
+    font-size: 9pt;
+    color: #94a3b8;
+    margin-top: 3mm;
+}
+
+.visual-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4mm;
+}
+
+.dia-box {
+    padding: 4mm 8mm;
+    border: 2px solid var(--primary);
+    border-radius: 3mm;
+    font-weight: 700;
+    font-size: 10pt;
+}
+
+/* Table */
+.comparison-table {
+    margin: 8mm 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 2mm;
+    overflow: hidden;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 2fr;
+    padding: 4mm;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 9.5pt;
+}
+
+/* Levier List */
+.levier-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6mm;
+}
+
+.levier-item h4 {
+    color: var(--secondary);
+    font-size: 12pt;
+    margin-bottom: 1.5mm;
+    font-weight: 700;
+}
+
+.levier-item p {
+    font-size: 10pt;
+    line-height: 1.4;
+}
+
+/* Page 5 Specific */
+.modern-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5mm;
+    margin: 8mm 0;
+}
+
+.modern-feat h4 {
+    font-size: 11pt;
+    margin-bottom: 2mm;
+}
+
+.modern-feat p {
+    font-size: 9pt;
+}
+
+.detailed-info-box {
+    background: #fffbeb;
+    padding: 6mm;
+    border-radius: 4mm;
+    border: 1px dashed var(--secondary);
+    margin-bottom: 8mm;
+}
+
+.detailed-info-box h3 {
+    color: #92400e;
+    font-size: 12pt;
+    margin-bottom: 2mm;
+}
+
+.detailed-info-box p {
+    font-size: 10pt;
+}
+
+.quote-box {
+    padding: 8mm;
+    background: #f1f5f9;
+    border-radius: 4mm;
+    font-style: italic;
+    color: var(--primary);
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    font-size: 11pt;
+}
+
+/* Page 6 */
+.page-6 {
+    background: var(--primary);
+    color: white;
+    padding: 20mm;
+}
+
+.final-checklist {
+    margin-top: 5mm;
+}
+
+.final-checklist h2 {
+    color: white;
+    font-size: 18pt;
+    margin-bottom: 8mm;
+}
+
+.step-num {
+    min-width: 32px;
+    height: 32px;
+    background: var(--secondary);
+}
+
+.final-contact-card {
+    background: white;
+    color: var(--primary);
+    padding: 8mm;
+    border-radius: 8mm;
+    margin-top: 15mm;
+    text-align: center;
+    border: 2mm solid var(--secondary);
+}
+
+.pdf-logo-final {
+    width: 25mm;
+    height: 25mm;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 5mm;
+}
+
+.footer-message {
+    margin-top: 8mm;
+    padding-top: 5mm;
+    border-top: 1px solid #f1f5f9;
+}
+
+.footer-message p {
+    font-size: 9pt;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.back-cover-footer {
+    position: absolute;
+    bottom: 10mm;
+    left: 20mm;
+    right: 20mm;
+    text-align: center;
+    font-size: 8pt;
+    opacity: 0.6;
+    color: white;
+}
+
+@media (max-width: 992px) {
+    .guide-cta-card {
+        grid-template-columns: 1fr;
+        padding: 2.5rem;
+    }
+
+    .guide-preview-visual {
+        display: none;
+    }
+}

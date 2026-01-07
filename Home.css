@@ -1,0 +1,567 @@
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background: #0F172A;
+}
+
+.hero-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay-base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* Slight darkening of the whole image */
+    z-index: 1;
+}
+
+/* The blue geometric shape from reference */
+.hero-overlay-geometric {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    /* Covers left side */
+    height: 100%;
+    background: linear-gradient(135deg, rgba(38, 70, 83, 0.95) 0%, rgba(42, 157, 143, 0.85) 100%);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    /* Slanted cut */
+    z-index: 2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    padding-top: 0;
+    width: 100%;
+}
+
+/* Old overlay classes removed/unused now */
+
+.hero-text-wrapper {
+    max-width: 900px;
+}
+
+/* Logo removed */
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: -1px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn-lg {
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+}
+
+.shadow-glow {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+}
+
+.btn-outline-white {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    backdrop-filter: blur(10px);
+}
+
+.btn-outline-white:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    /* Dark indicator */
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.scroll-indicator .line {
+    width: 1px;
+    height: 40px;
+    background: var(--primary);
+}
+
+/* Scroll Storytelling Section */
+.scroll-section {
+    height: 400vh;
+    /* 4 screens height */
+    position: relative;
+    background-color: var(--bg);
+}
+
+.sticky-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.split-screen {
+    width: 100%;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    height: 100%;
+    align-items: center;
+}
+
+.pillars-text-side {
+    position: relative;
+    height: 400px;
+    /* Adjust based on content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pillars-image-side {
+    position: relative;
+    height: 80vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Animation Overlays */
+.pillar-text-card {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 2rem;
+}
+
+.pillar-number {
+    font-family: var(--font-heading);
+    font-size: 8rem;
+    color: rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: -4rem;
+    left: -2rem;
+    z-index: -1;
+    font-weight: 700;
+}
+
+.pillar-text-card h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.pillar-text-card p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 90%;
+}
+
+.learn-more-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.pillar-img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pillar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.glass-card-label {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* Responsive - Tablet and Mobile */
+@media (max-width: 992px) {
+    .split-screen {
+        grid-template-columns: 1fr;
+        padding-top: 0;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    /* Keep the height for scrolling space */
+    .scroll-section {
+        height: 400vh;
+    }
+
+    /* Enable sticky again */
+    .sticky-container {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .container.grid.split-screen {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pillars-text-side {
+        height: 100%;
+        width: 100%;
+
+        /* Grid approach for perfect centering overlap */
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+
+        padding: 1rem;
+        z-index: 2;
+    }
+
+    .pillars-image-side {
+        display: none !important;
+    }
+
+    .pillar-img-wrapper {
+        display: none;
+    }
+
+    .glass-card-label {
+        display: none;
+    }
+
+    .pillar-text-card {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+
+        /* Stack all cards in the same grid cell */
+        grid-area: 1 / 1;
+
+        width: 100%;
+        max-width: 380px;
+
+        pointer-events: auto;
+
+        /* Remove old absolute positioning hacks */
+        position: relative !important;
+        top: auto;
+        left: auto;
+        transform: none;
+        translate: 0 0;
+        margin: 0;
+
+        will-change: transform, opacity;
+    }
+
+    /* Show the 'mobile-pillar-img' inside the card */
+    .mobile-pillar-img {
+        display: block !important;
+        width: 100%;
+        height: 200px;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .pillar-number {
+        display: none;
+    }
+
+    .pillar-text-card h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .learn-more-link {
+        justify-content: center;
+    }
+
+    /* Mobile-specific card styles */
+    .mobile-view-container {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        padding: 1rem;
+    }
+
+    .mobile-cards-stack {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .pillar-text-card.mobile-card {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+        max-width: 380px;
+
+        /* Grid stacking */
+        grid-area: 1 / 1;
+
+        position: relative;
+        margin: 0;
+
+        will-change: transform, opacity;
+    }
+
+    .mobile-pillar-img {
+        display: block;
+        width: 100%;
+        height: 200px;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-pillar-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .pillar-number {
+        font-size: 2rem;
+        position: static;
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--secondary);
+    }
+}
+
+/* Mobile Hero Specifics */
+@media (max-width: 768px) {
+
+    /* Make the geometric shape cover the whole screen comfortably on mobile with some transparency */
+    .hero-overlay-geometric {
+        width: 100%;
+        clip-path: none;
+        /* Remove the slant */
+        background: linear-gradient(135deg, rgba(38, 70, 83, 0.95) 0%, rgba(42, 157, 143, 0.9) 100%);
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 0 1.5rem;
+    }
+
+    .hero-text-wrapper {
+        margin: 0 auto !important;
+        /* Center text */
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        /* Smaller font for mobile */
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        border-left: none !important;
+        /* Remove side border */
+        padding-left: 0 !important;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--secondary);
+        /* Put border at bottom instead */
+        margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        margin-left: 0 !important;
+    }
+}
+
+/* Testimonials - Global Styles */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-icon {
+    font-size: 4rem;
+    color: var(--secondary);
+    opacity: 0.2;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-family: serif;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    color: var(--text);
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.testimonial-author h4 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.testimonial-author span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments for Testimonials */
+@media (max-width: 992px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Impact Section Utilities */
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.text-white {
+    color: #fff;
+}
+
+.py-16 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.divide-x {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .divide-x {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+    }
+}

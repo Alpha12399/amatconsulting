@@ -1,0 +1,156 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.navbar.transparent {
+    background: transparent;
+    padding: 1.5rem 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.navbar-logo-text {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar.scrolled .navbar-logo-text {
+    font-size: 1.2rem;
+}
+
+.navbar-logo-img {
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .navbar-logo-img {
+    height: 60px;
+    width: 60px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.navbar-menu a {
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    transition: var(--transition);
+    text-transform: capitalize;
+    /* More readable than uppercase */
+    letter-spacing: 0.3px;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+/* Hover effect: Subtle underline instead of full color change */
+.navbar-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary);
+    transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover,
+.navbar-menu a.active {
+    color: #fff;
+    /* Keep white for clarity */
+}
+
+.navbar-menu a:hover::after,
+.navbar-menu a.active::after {
+    width: 100%;
+}
+
+/* Specific style for the Contact button in Navbar */
+/* We target the last item if it's the contact button class */
+.navbar-menu .btn-primary {
+    background: rgba(255, 255, 255, 0.1);
+    /* Glassy button by default */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    padding: 0.6rem 1.5rem;
+}
+
+.navbar-menu .btn-primary:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* On scrolled state, make it pop a bit more but still elegant */
+.navbar.scrolled .navbar-menu .btn-primary {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.navbar.scrolled .navbar-menu .btn-primary:hover {
+    background: var(--secondary-light);
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--primary);
+        /* Uses the new Green Primary */
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.3s ease;
+        padding: 2rem;
+    }
+
+    .navbar-menu.active {
+        right: 0;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-toggle {
+        display: block;
+        z-index: 1100;
+    }
+}
